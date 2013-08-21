@@ -2,7 +2,7 @@
 <package >
 	<metadata>
 		<id>Dede.SignalR.Backplane.ServerHub</id>
-		<version>0.9.0-beta1</version>
+		<version>0.9.1</version>
 		<title>SignalR Backplane - ServerHub</title>
 		<authors>Damien DALY</authors>
 		<owners>Damien DALY</owners>

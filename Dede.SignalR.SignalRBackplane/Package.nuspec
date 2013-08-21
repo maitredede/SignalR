@@ -2,8 +2,8 @@
 <package >
 	<metadata>
 		<id>Dede.SignalR.Backplane</id>
-		<version>0.9.0-beta1</version>
-		<title>SignalR Backplane - ServerHub</title>
+		<version>0.9.1</version>
+		<title>SignalR Backplane - MessageBus</title>
 		<authors>Damien DALY</authors>
 		<owners>Damien DALY</owners>
 		<description>SignalR scalability using SignalR as backplane. This is the message bus component. Use the Dede.SignalR.Backplane.ServerHub package that contains the central hub.</description>
