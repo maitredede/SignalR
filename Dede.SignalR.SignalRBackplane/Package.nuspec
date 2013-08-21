@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>Dede.SignalR.Backplane</id>
+		<version>0.9.0-beta1</version>
+		<title>SignalR Backplane - ServerHub</title>
+		<authors>Damien DALY</authors>
+		<owners>Damien DALY</owners>
+		<description>SignalR scalability using SignalR as backplane. This is the message bus component. Use the Dede.SignalR.Backplane.ServerHub package that contains the central hub.</description>
+		<releaseNotes>First release</releaseNotes>
+		<summary>SignalR scalability using SignalR as backplane. This is the message bus component.</summary>
+		<language>en-US</language>
+		<projectUrl>https://github.com/MaitreDede/SignalR</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<dependencies>
+			<group targetFramework="net45">
+				<dependency id="Microsoft.AspNet.SignalR.Core" version="1.1.3" />
+				<dependency id="Microsoft.AspNet.SignalR.Client" version="1.1.3" />
+			</group>
+		</dependencies>
+		<references></references>
+		<tags>SignalR</tags>
+	</metadata>
+</package>

@@ -1,0 +1,42 @@
+﻿<input type="text" name="txtInput" id="txtInput" placeholder="Type your message" disabled />
+<button type="button" name="btnSend" id="btnSend" disabled>Send</button>
+<div id="panMessages">
+
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var chat = $.connection.chatHub;
+            chat.client.message = function (msg) {
+                console.log(msg);
+                $("<p />").text(msg).appendTo($("#panMessages"));
+            };
+            $.connection.hub.start().done(function () {
+                var txtInput = $("#txtInput");
+                var btnSend = $("#btnSend");
+
+                btnSend.removeAttr("disabled");
+                txtInput.removeAttr("disabled");
+
+                btnSend.click(function (e) {
+                    var msg = txtInput.val().trim();
+                    if (msg.length > 0) {
+                        btnSend.attr("disabled", "disabled");
+                        txtInput.attr("disabled", "disabled");
+                        txtInput.val("");
+                        chat.server.send(msg).done(function () {
+                            btnSend.removeAttr("disabled");
+                            txtInput.removeAttr("disabled");
+                            txtInput.focus();
+                        }).fail(function (e) {
+                            console.log(e);
+                        });
+                    }
+                });
+            }).fail(function (e) {
+                console.log(e);
+            });
+        });
+    </script>
+}
